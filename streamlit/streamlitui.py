@@ -29,8 +29,8 @@ add_bg_from_url()
 st.title("Simple Image Classification Application")
 st.write("")
 
-with open( "style.css" ) as css:
-    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
+#with open( "style.css" ) as css:
+#    st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 # enable users to upload images for the model to make predictions
 upload_title = '<p style="font-family:Courier; color:Red; font-size: 40px;"><b>Upload an Image</b></p>'

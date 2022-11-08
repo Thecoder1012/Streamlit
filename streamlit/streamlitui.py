@@ -69,7 +69,7 @@ def predict(image):
     batch_t = torch.unsqueeze(transform(img), 0)
     resnet.eval()
     out = resnet(batch_t)
-    req = "https://github.com/denistanjingyu/Image-Classification-Web-App-using-PyTorch-and-Streamlit/blob/main/imagenet_classes.txt"
+    req = "https://github.com/Thecoder1012/Streamlit/blob/main/streamlit/class/imagenet_classes.csv"
     with urllib.request.urlopen(req) as f:
         classes = [line.strip() for line in f.readlines()]
 

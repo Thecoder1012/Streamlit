@@ -4,6 +4,7 @@ from PIL import Image
 from torchvision import models, transforms
 import torch
 import streamlit as st
+import os
 
 #set background
 
@@ -69,7 +70,7 @@ def predict(image):
     resnet.eval()
     out = resnet(batch_t)
 
-    with open('./imagenet_classes.csv') as f:
+    with open(os.path.join('./imagenet_classes.csv')) as f:
         classes = [line.strip() for line in f.readlines()]
 
     # return the top 5 predictions ranked by highest probabilities

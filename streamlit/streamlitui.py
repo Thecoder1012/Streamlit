@@ -69,8 +69,8 @@ def predict(image):
     batch_t = torch.unsqueeze(transform(img), 0)
     resnet.eval()
     out = resnet(batch_t)
-
-    with open('class/imagenet_classes.csv') as f:
+    req = "https://github.com/denistanjingyu/Image-Classification-Web-App-using-PyTorch-and-Streamlit/blob/main/imagenet_classes.txt"
+    with urllib.request.urlopen(req) as f:
         classes = [line.strip() for line in f.readlines()]
 
     # return the top 5 predictions ranked by highest probabilities

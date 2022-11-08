@@ -29,7 +29,7 @@ add_bg_from_url()
 st.title("Simple Image Classification Application")
 st.write("")
 
-with open( "./app/style.css" ) as css:
+with open( "app/style.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 # enable users to upload images for the model to make predictions
